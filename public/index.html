@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SWIFTY AI STUDIO | Build & Scale Your AI Agency by Sir Muhammad Adeel</title>
+    <meta name="description" content="SWIFTY AI STUDIO - Master the art of building, monetizing, and scaling an AI Influencer Agency. Full-stack powered by Node.js, Express, MongoDB & TypeScript.">
+    <meta name="keywords" content="SWIFTY AI STUDIO, AI Influencer, AI Agency, Stable Diffusion, Fanvue, Monetization, Content Automation, Express, MongoDB">
+    
+    <!-- Open Graph Meta -->
+    <meta property="og:title" content="SWIFTY AI STUDIO | Sir Muhammad Adeel">
+    <meta property="og:description" content="Step-by-step framework to create realistic AI influencers and generate recurring revenue with SWIFTY AI STUDIO.">
+    <meta property="og:type" content="website">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="dark-theme">
+
+    <!-- Announcement Bar -->
+    <div class="announcement-bar">
+        <div class="container announcement-content">
+            <span class="badge-pulse"><i class="fa-solid fa-bolt"></i> SPECIAL DISCOUNT</span>
+            <p>Enroll now in <strong>SWIFTY AI STUDIO</strong> & get <strong>Lifetime Access + VIP Support</strong> for only <strong>PKR 8,999</strong> before price increases!</p>
+            <div class="timer" id="countdown-timer">
+                <span id="hours">08</span>h : <span id="minutes">42</span>m : <span id="seconds">19</span>s
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <header class="site-header" id="header">
+        <div class="container header-container">
+            <a href="#" class="logo">
+                <div class="logo-icon">
+                    <i class="fa-solid fa-brain-circuit"></i>
+                </div>
+                <div class="logo-text">
+                    <span class="brand-name">SWIFTY <span class="highlight">AI STUDIO</span></span>
+                    <span class="brand-sub">BY SIR MUHAMMAD ADEEL</span>
+                </div>
+            </a>
+
+            <nav class="nav-menu" id="nav-menu">
+                <a href="#hero" class="nav-link active">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#curriculum" class="nav-link">Curriculum</a>
+                <a href="#mentorship" class="nav-link">1-on-1 Mentorship</a>
+                <a href="#pricing" class="nav-link">Pricing</a>
+                <a href="#reviews" class="nav-link">Reviews</a>
+                <a href="#faq" class="nav-link">FAQ</a>
+            </nav>
+
+            <div class="header-actions">
+                <a href="#pricing" class="btn btn-primary glow-btn">
+                    <span>Join Studio</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+                <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle Menu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section" id="hero">
+        <div class="hero-bg-glow"></div>
+        <div class="container hero-container">
+            <div class="hero-badge">
+                <span class="green-dot"></span>
+                <span>SWIFTY AI STUDIO • 1,000+ Active Agency Builders</span>
+            </div>
+
+            <h1 class="hero-title">
+                BUILD & SCALE A HIGH-PROFIT <br>
+                <span class="gradient-text">AI INFLUENCER AGENCY</span>
+            </h1>
+
+            <p class="hero-subtitle">
+                SWIFTY AI STUDIO is your step-by-step launchpad to create ultra-realistic digital models, automate viral content, and generate consistent monthly recurring revenue.
+            </p>
+
+            <!-- Video Player Preview Container -->
+            <div class="video-preview-wrapper" id="video-trigger">
+                <div class="video-thumbnail">
+                    <div class="thumbnail-overlay">
+                        <div class="play-btn-circle">
+                            <i class="fa-solid fa-play"></i>
+                        </div>
+                        <div class="video-badge">
+                            <i class="fa-brands fa-youtube red-icon"></i>
+                            <span>Watch Free Masterclass (18 Mins)</span>
+                        </div>
+                    </div>
+                    <div class="video-info-banner">
+                        <span class="video-title">"How I Built a $1.8M AI Influencer Agency at Age 21"</span>
+                        <span class="video-author">Presented by Sir Muhammad Adeel (SWIFTY AI STUDIO)</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-cta-group">
+                <a href="#pricing" class="btn btn-gradient btn-lg">
+                    <i class="fa-solid fa-rocket"></i>
+                    <span>Get Instant Access Now (PKR 8,999)</span>
+                </a>
+                <a href="#curriculum" class="btn btn-outline btn-lg">
+                    <i class="fa-solid fa-list-check"></i>
+                    <span>Explore Studio Modules</span>
+                </a>
+            </div>
+
+            <div class="trust-indicators">
+                <div class="trust-item">
+                    <i class="fa-solid fa-shield-halved text-success"></i>
+                    <span>Lifetime Access & Updates</span>
+                </div>
+                <div class="trust-item">
+                    <i class="fa-solid fa-users text-primary"></i>
+                    <span>Private VIP Support</span>
+                </div>
+                <div class="trust-item">
+                    <i class="fa-solid fa-server text-warning"></i>
+                    <span>Node, Express & MongoDB Stack</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Bar -->
+    <section class="stats-section">
+        <div class="container stats-grid">
+            <div class="stat-card">
+                <h3 class="stat-number" id="stat-revenue" data-target="1800000">$0</h3>
+                <p class="stat-label">Total Revenue Generated</p>
+            </div>
+            <div class="stat-card">
+                <h3 class="stat-number" id="stat-students" data-target="1240">0</h3>
+                <p class="stat-label">Successful Students</p>
+            </div>
+            <div class="stat-card">
+                <h3 class="stat-number" id="stat-satisfaction" data-target="98">0%</h3>
+                <p class="stat-label">Satisfaction Rate</p>
+            </div>
+            <div class="stat-card">
+                <h3 class="stat-number" id="stat-support" data-target="24">0/7</h3>
+                <p class="stat-label">Mentor & Discord Support</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Intro Section -->
+    <section class="intro-section" id="about">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-tag">A MASSIVE UPGRADE</span>
+                <h2 class="section-title">This is More Than an Online Course... <br><span class="gradient-text">THIS IS SWIFTY AI POWER</span></h2>
+                <p class="section-desc">
+                    Built on real battle-tested experience operating top-tier AI influencer assets at SWIFTY AI STUDIO by Sir Muhammad Adeel.
+                </p>
+            </div>
+
+            <div class="intro-grid">
+                <div class="intro-card glass-card">
+                    <div class="card-icon">
+                        <i class="fa-solid fa-wand-magic-sparkles"></i>
+                    </div>
+                    <h3>Hyper-Realistic AI Models</h3>
+                    <p>Master face consistency, photorealistic skin textures, custom LoRAs, and clothing swaps using SDXL, Flux, and ComfyUI workflows.</p>
+                </div>
+
+                <div class="intro-card glass-card">
+                    <div class="card-icon">
+                        <i class="fa-solid fa-chart-line-up"></i>
+                    </div>
+                    <h3>Viral Content Automation</h3>
+                    <p>Automate video generation, Instagram Reels, TikTok, and Threads algorithms to pull millions of organic views from targeted US & global audiences.</p>
+                </div>
+
+                <div class="intro-card glass-card">
+                    <div class="card-icon">
+                        <i class="fa-solid fa-sack-dollar"></i>
+                    </div>
+                    <h3>Multi-Stream Monetization</h3>
+                    <p>Unlock 8+ revenue streams: Fanvue, Dfans, OnlyFans, Amazon Influencer, Brand Sponsorships, Digital Merch, and Affiliate Partnerships.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Master Class Framework -->
+    <section class="framework-section">
+        <div class="container framework-container">
+            <div class="framework-content">
+                <span class="section-tag">SYSTEMIZED SUCCESS</span>
+                <h2 class="section-title">Master The Complete AI Agency Ecosystem</h2>
+                <p class="lead-text">
+                    Whether you are starting from zero or looking to scale your existing agency, SWIFTY AI STUDIO gives you the exact blueprint.
+                </p>
+
+                <ul class="feature-checklist">
+                    <li>
+                        <i class="fa-solid fa-circle-check check-icon"></i>
+                        <div>
+                            <strong>Free & Paid Tools Methods Included:</strong>
+                            <span>Learn how to build models with zero upfront budget or using high-power cloud GPUs.</span>
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-circle-check check-icon"></i>
+                        <div>
+                            <strong>Both SFW & NSFW Strategies:</strong>
+                            <span>Step-by-step guidance for building brand-safe lifestyle influencers or high-converting subscription creators.</span>
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-circle-check check-icon"></i>
+                        <div>
+                            <strong>Monetization Vault & REST API:</strong>
+                            <span>Access ready-to-use DM sales scripts, subscription pricing strategy, and backend database integrations.</span>
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-circle-check check-icon"></i>
+                        <div>
+                            <strong>Lifetime Updates Guarantee:</strong>
+                            <span>As AI tools evolve (Flux 1.1, Wan 2.1, Sora, ComfyUI updates), new modules are added at zero extra charge.</span>
+                        </div>
+                    </li>
+                </ul>
+
+                <a href="#pricing" class="btn btn-primary btn-lg margin-top-md">
+                    <span>Unlock The Ecosystem</span>
+                    <i class="fa-solid fa-lock-open"></i>
+                </a>
+            </div>
+
+            <div class="framework-visual glass-card">
+                <div class="visual-header">
+                    <span class="dot red"></span>
+                    <span class="dot yellow"></span>
+                    <span class="dot green"></span>
+                    <span class="window-title">SWIFTY AI STUDIO Matrix</span>
+                </div>
+                <div class="visual-body">
+                    <div class="metric-row">
+                        <div class="metric-box">
+                            <span class="metric-name">Active API Routes</span>
+                            <span class="metric-val">Node / Express TS</span>
+                        </div>
+                        <div class="metric-box">
+                            <span class="metric-name">Database Engine</span>
+                            <span class="metric-val text-success">MongoDB Mongoose</span>
+                        </div>
+                    </div>
+                    <div class="platform-list">
+                        <div class="platform-item">
+                            <div class="p-info">
+                                <i class="fa-brands fa-instagram p-icon insta"></i>
+                                <span>Instagram Reels</span>
+                            </div>
+                            <span class="p-status">Automated (185k followers)</span>
+                        </div>
+                        <div class="platform-item">
+                            <div class="p-info">
+                                <i class="fa-brands fa-tiktok p-icon tiktok"></i>
+                                <span>TikTok US Traffic</span>
+                            </div>
+                            <span class="p-status">Automated (420k followers)</span>
+                        </div>
+                        <div class="platform-item">
+                            <div class="p-info">
+                                <i class="fa-solid fa-fire p-icon fanvue"></i>
+                                <span>Fanvue Subscriptions</span>
+                            </div>
+                            <span class="p-status text-success">$14,850/mo</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Curriculum Section -->
+    <section class="curriculum-section" id="curriculum">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-tag">COMPREHENSIVE TRAINING</span>
+                <h2 class="section-title">Course Curriculum & Modules</h2>
+                <p class="section-desc">Over 40+ high-definition video lessons with downloadable assets, ComfyUI workflows, and prompts.</p>
+            </div>
+
+            <div class="accordion-container" id="curriculum-accordion-container">
+                <!-- Dynamically loaded from /api/modules -->
+                <div class="text-center p-4">
+                    <i class="fa-solid fa-spinner fa-spin text-success" style="font-size: 2rem;"></i>
+                    <p class="margin-top-sm">Loading modules from MongoDB Express API...</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mentorship Section -->
+    <section class="mentorship-section" id="mentorship">
+        <div class="container">
+            <div class="mentorship-card glass-card">
+                <div class="m-badge">VIP MENTORSHIP</div>
+                <div class="mentorship-grid">
+                    <div class="m-content">
+                        <h2>1-on-1 Direct Mentorship <br><span class="gradient-text">From Sir Muhammad Adeel</span></h2>
+                        <p>
+                            Get direct personal guidance, custom workflow audits, profile reviews, and 1-on-1 strategy sessions at SWIFTY AI STUDIO to fast-track your agency path.
+                        </p>
+
+                        <ul class="m-features">
+                            <li><i class="fa-solid fa-star text-warning"></i> Private Direct WhatsApp / Telegram Chat Access</li>
+                            <li><i class="fa-solid fa-star text-warning"></i> Weekly 1-on-1 Zoom Coaching & Workflow Diagnostics</li>
+                            <li><i class="fa-solid fa-star text-warning"></i> Personalized Content Strategy & Profile Audits</li>
+                            <li><i class="fa-solid fa-star text-warning"></i> Priority Access to Custom LoRAs & Private Workflows</li>
+                        </ul>
+
+                        <button class="btn btn-warning btn-lg margin-top-md checkout-trigger" data-plan="Mentorship VIP">
+                            <i class="fa-solid fa-crown"></i>
+                            <span>Apply for 1-on-1 Mentorship</span>
+                        </button>
+                    </div>
+                    <div class="m-avatar-container">
+                        <div class="mentor-badge-wrapper">
+                            <div class="avatar-ring">
+                                <div class="avatar-inner">
+                                    <i class="fa-solid fa-user-astronaut mentor-icon"></i>
+                                </div>
+                            </div>
+                            <div class="mentor-info">
+                                <h3>Sir Muhammad Adeel</h3>
+                                <p>Founder, SWIFTY AI STUDIO</p>
+                                <div class="rating-stars">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <span>(5.0 Top Rated)</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing-section" id="pricing">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-tag">SPECIAL PAKISTAN DISCOUNT</span>
+                <h2 class="section-title">Lock-In Your Access Before Price Increases</h2>
+                <p class="section-desc">One-time payment for lifetime access to SWIFTY AI STUDIO. No monthly subscriptions.</p>
+            </div>
+
+            <div class="pricing-card-wrapper">
+                <div class="pricing-card glass-card popular-card">
+                    <div class="popular-tag">MOST POPULAR • LIMITED SPOTS</div>
+                    <div class="pricing-header">
+                        <h3>SWIFTY AI STUDIO Access</h3>
+                        <p>Complete training + Lifetime VIP Support</p>
+                        <div class="price-box">
+                            <span class="currency">PKR</span>
+                            <span class="amount"> 8,999</span>
+                            <span class="original-price">PKR 25,000</span>
+                        </div>
+                        <div class="price-subtitle">One-Time Payment • Lifetime Access</div>
+                    </div>
+
+                    <ul class="pricing-features">
+                        <li><i class="fa-solid fa-check text-success"></i> Full Step-by-Step AI Agency Video Course</li>
+                        <li><i class="fa-solid fa-check text-success"></i> Lifetime Access to Private Support Community</li>
+                        <li><i class="fa-solid fa-check text-success"></i> NSFW & SFW Content Creation Workflows</li>
+                        <li><i class="fa-solid fa-check text-success"></i> Free & Paid GPU Methods Included</li>
+                        <li><i class="fa-solid fa-check text-success"></i> Proven Monetization Models (Fanvue, Dfans, OnlyFans)</li>
+                        <li><i class="fa-solid fa-check text-success"></i> Social Media Growth Hacks (Reels, TikTok, Threads)</li>
+                        <li><i class="fa-solid fa-check text-success"></i> DM Sales Scripts & Brand Pitch Templates</li>
+                        <li><i class="fa-solid fa-check text-success"></i> Free Updates for Life (Flux, ComfyUI, Wan 2.1)</li>
+                    </ul>
+
+                    <button class="btn btn-gradient btn-block btn-lg checkout-trigger" data-plan="SWIFTY AI STUDIO Standard">
+                        <span>JOIN SWIFTY AI STUDIO NOW (PKR 8,999)</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+
+                    <div class="guarantee-note">
+                        <i class="fa-solid fa-lock"></i> JazzCash / EasyPaisa / Local Bank Transfer Accepted
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials / Reviews -->
+    <section class="reviews-section" id="reviews">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-tag">STUDENT PROOF</span>
+                <h2 class="section-title">What Our Agency Owners Say</h2>
+                <p class="section-desc">Real stories from students building digital assets with SWIFTY AI STUDIO.</p>
+            </div>
+
+            <div class="reviews-grid" id="reviews-grid-container">
+                <!-- Dynamically loaded from /api/reviews -->
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section" id="faq">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-tag">GOT QUESTIONS?</span>
+                <h2 class="section-title">Frequently Asked Questions</h2>
+            </div>
+
+            <div class="faq-container">
+                <div class="faq-item">
+                    <button class="faq-header">
+                        <span>Do I need an expensive PC or graphics card?</span>
+                        <i class="fa-solid fa-plus faq-icon"></i>
+                    </button>
+                    <div class="faq-content">
+                        <p>No! We cover both free and paid cloud GPU services (like Google Colab, RunPod, and Web services) so you can generate images and run workflows smoothly on any basic laptop or computer.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-header">
+                        <span>How long do I get access to SWIFTY AI STUDIO and support?</span>
+                        <i class="fa-solid fa-plus faq-icon"></i>
+                    </button>
+                    <div class="faq-content">
+                        <p>You get lifetime access! You will also receive all future course updates and permanent access to Sir Muhammad Adeel's private student community.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-header">
+                        <span>Can I do this if I have no coding or technical background?</span>
+                        <i class="fa-solid fa-plus faq-icon"></i>
+                    </button>
+                    <div class="faq-content">
+                        <p>Absolutely. The course is built step-by-step from beginner to advanced. Every software setup and prompt template is provided as drag-and-drop SOPs.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-header">
+                        <span>What backend & database powers SWIFTY AI STUDIO?</span>
+                        <i class="fa-solid fa-plus faq-icon"></i>
+                    </button>
+                    <div class="faq-content">
+                        <p>This application is powered by Node.js, Express framework, MongoDB database via Mongoose ORM, and written in strict TypeScript.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container footer-container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <a href="#" class="logo">
+                        <div class="logo-icon"><i class="fa-solid fa-brain-circuit"></i></div>
+                        <div class="logo-text">
+                            <span class="brand-name">SWIFTY <span class="highlight">AI STUDIO</span></span>
+                            <span class="brand-sub">BY SIR MUHAMMAD ADEEL</span>
+                        </div>
+                    </a>
+                    <p class="footer-desc">Empowering the next generation of digital agency owners with artificial intelligence automation and scalable monetization systems.</p>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#hero">Home</a></li>
+                        <li><a href="#about">About Program</a></li>
+                        <li><a href="#curriculum">Curriculum</a></li>
+                        <li><a href="#pricing">Pricing</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Connect</h4>
+                    <div class="social-icons">
+                        <a href="https://youtube.com" target="_blank" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="https://instagram.com" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://discord.com" target="_blank" aria-label="Discord"><i class="fa-brands fa-discord"></i></a>
+                        <a href="https://wa.me/" target="_blank" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom text-center">
+                <p>&copy; 2026 SWIFTY AI STUDIO by Sir Muhammad Adeel. Full-Stack Node.js + Express + MongoDB + TypeScript.</p>
+                <p class="disclaimer">Disclaimer: Results vary based on individual effort, application, and market execution.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Video Modal -->
+    <div class="modal-overlay" id="video-modal">
+        <div class="modal-box video-modal-box">
+            <button class="modal-close" id="close-video-modal">&times;</button>
+            <div class="iframe-responsive">
+                <iframe id="youtube-iframe" src="" title="How I Built a $1.8M AI Influencer Agency at 21" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+
+    <!-- Checkout Modal -->
+    <div class="modal-overlay" id="checkout-modal">
+        <div class="modal-box glass-card checkout-modal-box">
+            <button class="modal-close" id="close-checkout-modal">&times;</button>
+            <div class="checkout-header">
+                <h3>Enroll in <span class="gradient-text" id="selected-plan-name">SWIFTY AI STUDIO</span></h3>
+                <p>Complete your registration for instant portal access</p>
+            </div>
+            
+            <form id="checkout-form" class="checkout-form">
+                <div class="form-group">
+                    <label for="user-name">Full Name</label>
+                    <input type="text" id="user-name" required placeholder="Enter your full name">
+                </div>
+                <div class="form-group">
+                    <label for="user-email">Email Address</label>
+                    <input type="email" id="user-email" required placeholder="name@example.com">
+                </div>
+                <div class="form-group">
+                    <label for="payment-method">Payment Option</label>
+                    <select id="payment-method" required>
+                        <option value="JazzCash / EasyPaisa">JazzCash / EasyPaisa (Pakistan)</option>
+                        <option value="Local Bank Transfer">Local Bank Transfer (Pakistan)</option>
+                        <option value="Debit/Credit Card">Credit / Debit Card (Visa / Mastercard)</option>
+                        <option value="Crypto USDT">USDT / Crypto (Binance Pay)</option>
+                    </select>
+                </div>
+                
+                <div class="order-summary-box">
+                    <div class="summary-line">
+                        <span>Selected Package:</span>
+                        <strong id="summary-plan">SWIFTY AI STUDIO Standard</strong>
+                    </div>
+                    <div class="summary-line total-line">
+                        <span>Total Due Today:</span>
+                        <strong class="text-success" id="summary-price">PKR 8,999</strong>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn btn-gradient btn-block btn-lg margin-top-sm" id="submit-enrollment-btn">
+                    <i class="fa-solid fa-lock"></i>
+                    <span>Complete Enrollment Now</span>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Floating Chat -->
+    <div class="floating-chat-container">
+        <div class="chat-popup" id="chat-popup">
+            <div class="chat-header">
+                <div class="chat-avatar"><i class="fa-solid fa-user-astronaut"></i></div>
+                <div class="chat-user-info">
+                    <strong>SWIFTY AI STUDIO Support</strong>
+                    <span><i class="green-dot"></i> Online now</span>
+                </div>
+                <button class="chat-close" id="chat-close-btn">&times;</button>
+            </div>
+            <div class="chat-body">
+                <div class="chat-bubble left">
+                    Assalam-o-Alaikum! 👋 Welcome to SWIFTY AI STUDIO. Need help enrolling? Ask Sir Muhammad Adeel's team anything!
+                </div>
+            </div>
+            <div class="chat-footer">
+                <form id="chat-form" style="display: flex; gap: 6px; margin-bottom: 6px;">
+                    <input type="text" id="chat-input" placeholder="Type your message..." required style="flex: 1; padding: 6px 10px; border-radius: 4px; border: 1px solid var(--border-color); background: rgba(0,0,0,0.5); color: #fff; font-size: 0.8rem;">
+                    <button type="submit" class="btn btn-primary btn-sm"><i class="fa-solid fa-paper-plane"></i></button>
+                </form>
+                <a href="https://wa.me/" target="_blank" class="btn btn-whatsapp btn-sm btn-block">
+                    <i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp
+                </a>
+            </div>
+        </div>
+        <button class="chat-toggle-btn" id="chat-toggle-btn" aria-label="Open Chat">
+            <i class="fa-brands fa-whatsapp"></i>
+            <span class="chat-pulse"></span>
+        </button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
