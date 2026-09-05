@@ -5,62 +5,110 @@ import { Enrollment } from '../models/Enrollment';
 const defaultModules = [
     {
         moduleNumber: '01',
-        title: 'Module 1: Foundations & AI Character Creation',
-        metaInfo: '7 Lessons • Prompts & Workflows',
+        title: 'What Is This Business & How To Start?',
+        metaInfo: '1 Foundation Lesson • Agency Business Model Overview',
         order: 1,
         lessons: [
-            { title: 'Understanding the AI Influencer Market & Niche Selection' },
-            { title: 'Midjourney v6 & Flux 1.1 Model Generation Secrets' },
-            { title: 'Face Consistency Masterclass: Maintaining Identity across 1,000s of photos' },
-            { title: 'Setting Up ComfyUI & Automatic1111 on Free vs Paid Cloud GPUs' },
-            { title: 'Creating Custom LoRAs for Unique Faces & Body Types' }
+            { title: 'What Is This Business & How To Start?' }
         ]
     },
     {
         moduleNumber: '02',
-        title: 'Module 2: AI Video Generation & Animation',
-        metaInfo: '8 Lessons • Runway, Kling & LivePortrait',
+        title: 'Social Media Warm-Up Strategy',
+        metaInfo: '4 Lessons • TikTok, Instagram & Initial 200 Subscribers',
         order: 2,
         lessons: [
-            { title: 'Animating Static AI Images into Realistic Talking Videos' },
-            { title: 'Lip Syncing & Voice Cloning with ElevenLabs' },
-            { title: 'Video-to-Video Motion Transfer for Viral Dance Trends' },
-            { title: 'Runway Gen-3 & Kling AI Prompt Engineering for Smooth Motion' }
+            { title: 'Warm Up Social Accounts & Get Your First 200 Subscribers' },
+            { title: 'Social Media Warm-Up Strategy' },
+            { title: 'TikTok Account Creation + Warm-Up Strategy' },
+            { title: 'How to Create Instagram Account Professionally + Warm Up' }
         ]
     },
     {
         moduleNumber: '03',
-        title: 'Module 3: Social Media Growth & Audience Targeting',
-        metaInfo: '9 Lessons • US Traffic & Algorithm Secrets',
+        title: 'AI Influencer Mastery Program (2026 Updated)',
+        metaInfo: '13 Core Lessons • Character Creation, ComfyUI, LoRAs & Fanvue',
         order: 3,
         lessons: [
-            { title: 'How to Target High-Paying Tier-1 Audiences (US, UK, CA, AU)' },
-            { title: 'Instagram Reels Algorithm Hacking for Rapid Growth' },
-            { title: 'TikTok Warmup & Shadowban Prevention Protocols' },
-            { title: 'Automated Posting & Scheduling Pipeline Setup' }
+            { title: 'Important — Read This First' },
+            { title: 'First Download All the Data Here' },
+            { title: 'Complete Proxy Setup & Social Media Account Creation' },
+            { title: 'AI Content Creation (Part 1) – Character Creation & Workflow Setup' },
+            { title: 'AI Content Creation (Part 2) – Advanced Image & Video Generation (SFW + NSFW)' },
+            { title: 'AI Content Creation (Part 3) – Professional Content Pipeline & Automation' },
+            { title: 'AI Product Hunting & Viral Video Creation' },
+            { title: 'Professional LoRA Training & Character Consistency' },
+            { title: 'Content Uploading & Platform Optimization' },
+            { title: 'Social Media Growth & Audience Building' },
+            { title: 'Fanvue Monetization & Live Selling Strategy' },
+            { title: 'My 10+ Chase Templates of My Own Fans' },
+            { title: 'Fanvue Chat' }
         ]
     },
     {
         moduleNumber: '04',
-        title: 'Module 4: Monetization Funnels & High-Ticket Earnings',
-        metaInfo: '10 Lessons • Fanvue, OnlyFans, Amazon & Sponsorships',
+        title: 'Product Hunting Strategy for Amazon Affiliate',
+        metaInfo: '2 Lessons • Passive Affiliate Income & High-Converting Offers',
         order: 4,
         lessons: [
-            { title: 'Setting Up Fanvue & Dfans Subscription Platforms' },
-            { title: 'High-Converting Pay-Per-View (PPV) & Chat Sales Systems' },
-            { title: 'Amazon Influencer Program & Fashion Affiliate Commission' },
-            { title: 'Pitching & Closing Brand Collaborations' }
+            { title: 'Product Hunting Strategy (Amazon Affiliate)' },
+            { title: 'Product Hunting Strategy (High-Converting Offer)' }
         ]
     },
     {
         moduleNumber: '05',
-        title: 'Module 5: Scaling, Automation & Agency Legal Setup',
-        metaInfo: '6 Lessons • SOPs & Payment Gateways',
+        title: 'How to Create SFW + NSFW Content (ComfyUI + Free & Paid Tools)',
+        metaInfo: '4 Lessons • ComfyUI Workflows, Video & Image Pipeline',
         order: 5,
         lessons: [
-            { title: 'Managing Multiple AI Influencers Simultaneously' },
-            { title: 'International Payment Gateways & Banking Setup' },
-            { title: 'Hiring VAs & Chatters to Run Your Business 100% Hands-Free' }
+            { title: 'How to Create SFW Content (ComfyUI + Tools)' },
+            { title: 'How to Create SFW Content in ComfyUI + Workflow + Tools' },
+            { title: 'Content Posting Strategy (AI Influencer Growth System)' },
+            { title: 'SFW and NSFW Video & Image Creation' }
+        ]
+    },
+    {
+        moduleNumber: '06',
+        title: 'More Ways to Create Content (Advanced NSFW Monetization)',
+        metaInfo: '5 Lessons • CapCut Setup & High-Ticket Monetization',
+        order: 6,
+        lessons: [
+            { title: 'How to Create NSFW Content (Advanced Monetization)' },
+            { title: 'How to Create NSFW Content (Advanced Monetization) – Part 2' },
+            { title: 'How to Create NSFW Content (Advanced Monetization) – Part 3' },
+            { title: 'How to Create NSFW Content (Advanced Monetization) – Part 4 – CapCut Setup' },
+            { title: 'How to Create NSFW Content (Advanced Monetization) – Part 5' }
+        ]
+    },
+    {
+        moduleNumber: '07',
+        title: 'Account Setup: Payoneer, Fanvue & Amazon',
+        metaInfo: '1 Essential Lesson • Banking, Payouts & Global Gateways',
+        order: 7,
+        lessons: [
+            { title: 'Account Setup: Payoneer, Fanvue & Amazon (Step-by-step guidance)' }
+        ]
+    },
+    {
+        moduleNumber: '08',
+        title: 'Your Daily Routine Setup?',
+        metaInfo: '1 Agency Routine Lesson • Daily Time Management & Scaling',
+        order: 8,
+        lessons: [
+            { title: 'Your Daily Routine Setup for Consistent Revenue & Output' }
+        ]
+    },
+    {
+        moduleNumber: '09',
+        title: 'Next-Gen Workflows, Video Faceswap & Practical Chat',
+        metaInfo: '5 Advanced Lessons • LTX, Gemma, Chat Automation & Future Workflows',
+        order: 9,
+        lessons: [
+            { title: 'More Videos Coming Soon About More Ways of Creating Content and Making Money' },
+            { title: 'New Workflows' },
+            { title: 'Video Faceswap NSFW + SFW Using LTX and GEMMA' },
+            { title: 'Practical Chat System' },
+            { title: 'Practical Chat Flow with Proper Guidance' }
         ]
     }
 ];

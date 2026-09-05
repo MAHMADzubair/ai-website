@@ -97,6 +97,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    attachAccordionEvents();
     loadCourseModules();
 
     /* ==========================================================================
