@@ -142,16 +142,57 @@ document.addEventListener('DOMContentLoaded', () => {
        ========================================================================== */
     const mobileToggle = document.getElementById('mobile-toggle');
     const navMenu = document.getElementById('nav-menu');
+    const navBackdrop = document.getElementById('nav-backdrop');
+    const navLinks = document.querySelectorAll('.nav-menu .nav-link');
+
+    function closeNavMenu() {
+        if (navMenu) navMenu.classList.remove('active');
+        if (navBackdrop) navBackdrop.classList.remove('active');
+        document.body.classList.remove('menu-open');
+        if (mobileToggle) {
+            mobileToggle.setAttribute('aria-expanded', 'false');
+            const icon = mobileToggle.querySelector('i');
+            if (icon) icon.className = 'fa-solid fa-bars';
+        }
+    }
+
+    function openNavMenu() {
+        if (navMenu) navMenu.classList.add('active');
+        if (navBackdrop) navBackdrop.classList.add('active');
+        document.body.classList.add('menu-open');
+        if (mobileToggle) {
+            mobileToggle.setAttribute('aria-expanded', 'true');
+            const icon = mobileToggle.querySelector('i');
+            if (icon) icon.className = 'fa-solid fa-xmark';
+        }
+    }
 
     if (mobileToggle && navMenu) {
-        mobileToggle.addEventListener('click', () => {
-            navMenu.classList.toggle('active');
-            const icon = mobileToggle.querySelector('i');
-            if (icon) {
-                icon.className = navMenu.classList.contains('active') ? 'fa-solid fa-xmark' : 'fa-solid fa-bars';
+        mobileToggle.addEventListener('click', (e) => {
+            e.stopPropagation();
+            if (navMenu.classList.contains('active')) {
+                closeNavMenu();
+            } else {
+                openNavMenu();
             }
         });
     }
+
+    if (navBackdrop) {
+        navBackdrop.addEventListener('click', closeNavMenu);
+    }
+
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            closeNavMenu();
+        });
+    });
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && navMenu && navMenu.classList.contains('active')) {
+            closeNavMenu();
+        }
+    });
 
     const faqHeaders = document.querySelectorAll('.faq-header');
     faqHeaders.forEach(header => {
