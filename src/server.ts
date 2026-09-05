@@ -1,4 +1,4 @@
-import express, { Application, Request, Response } from 'express';
+﻿import express, { Application, Request, Response } from 'express';
 import cors from 'cors';
 import dotenv from 'dotenv';
 import path from 'path';
@@ -34,10 +34,11 @@ app.get('*', (req: Request, res: Response) => {
 if (process.env.NODE_ENV !== 'production' && !process.env.VERCEL) {
     app.listen(PORT, () => {
         console.log(`==================================================`);
-        console.log(`🚀 SWIFTY AI STUDIO Express Server Active!`);
-        console.log(`🌐 Server running at: http://localhost:${PORT}`);
+        console.log(`ðŸš€ AI KINGDOM Express Server Active!`);
+        console.log(`ðŸŒ Server running at: http://localhost:${PORT}`);
         console.log(`==================================================`);
     });
 }
 
 export default app;
+

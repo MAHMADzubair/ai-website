@@ -1,4 +1,4 @@
-import { Router } from 'express';
+﻿import { Router } from 'express';
 import { getCourseModules, getAgencyStats } from '../controllers/courseController';
 import { createEnrollment, getEnrollments } from '../controllers/enrollmentController';
 import { getReviews } from '../controllers/reviewController';
@@ -8,7 +8,7 @@ const router = Router();
 
 // Health Check
 router.get('/health', (req, res) => {
-    res.status(200).json({ status: 'OK', message: 'SWIFTY AI STUDIO API is online' });
+    res.status(200).json({ status: 'OK', message: 'AI KINGDOM API is online' });
 });
 
 // Course & Stats Endpoints
@@ -24,3 +24,4 @@ router.get('/reviews', getReviews);
 router.post('/leads', createLead);
 
 export default router;
+

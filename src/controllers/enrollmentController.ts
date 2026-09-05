@@ -1,4 +1,4 @@
-import { Request, Response } from 'express';
+﻿import { Request, Response } from 'express';
 import { Enrollment } from '../models/Enrollment';
 
 const inMemoryEnrollments: any[] = [];
@@ -18,7 +18,7 @@ export const createEnrollment = async (req: Request, res: Response): Promise<voi
             fullName,
             email,
             paymentMethod,
-            plan: plan || 'SWIFTY AI STUDIO Standard',
+            plan: plan || 'AI KINGDOM Standard',
             amount,
             currency: 'PKR',
             status: 'Completed',
@@ -30,14 +30,14 @@ export const createEnrollment = async (req: Request, res: Response): Promise<voi
             await enrollmentDoc.save();
             res.status(201).json({
                 success: true,
-                message: 'Enrollment successful! Welcome to SWIFTY AI STUDIO.',
+                message: 'Enrollment successful! Welcome to AI KINGDOM.',
                 data: enrollmentDoc
             });
         } catch (dbErr) {
             inMemoryEnrollments.push({ ...newRecord, _id: Date.now().toString() });
             res.status(201).json({
                 success: true,
-                message: 'Enrollment successful! Welcome to SWIFTY AI STUDIO.',
+                message: 'Enrollment successful! Welcome to AI KINGDOM.',
                 data: newRecord
             });
         }
@@ -57,3 +57,4 @@ export const getEnrollments = async (req: Request, res: Response): Promise<void>
         res.status(200).json({ success: true, count: inMemoryEnrollments.length, data: inMemoryEnrollments });
     }
 };
+
